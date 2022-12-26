@@ -34,7 +34,7 @@
     background-color: red;
 }
 .invalid{
-    animation: flash 1s;
+    animation: flash 6s;
 }
 .output {
     position: relative;
@@ -48,7 +48,7 @@
     top: -6vh;
 }
 @keyframes flash {
-    5%{
+    10%{
         border-color: crimson;
     }
 
