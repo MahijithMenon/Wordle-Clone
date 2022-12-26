@@ -1,5 +1,5 @@
 const letters=document.querySelectorAll('.scoreboardletter');
-console.log(letters);
+// console.log(letters);
 const loading=document.querySelector('.info');
 const output=document.querySelector('.output');
 const ANSWER_LENGTH=5;
@@ -13,7 +13,7 @@ async function init(){
     wordParts=word.split("");
     setLoading(false);
     isLoading=false;
-    console.log(word);
+    // console.log(word);
     let currentGuess='';
     let currentRow=0;
 document.addEventListener('keydown',function handleKeypress(event){
@@ -21,7 +21,7 @@ document.addEventListener('keydown',function handleKeypress(event){
         return;
     }
     const action=event.key;
-    console.log(action);
+    // console.log(action);
 
    if(action==='Enter'){
     commit();
@@ -51,7 +51,7 @@ async function commit(){
     })
     const resOBJ= await res.json();
     const {validWord}= resOBJ;
-    console.log(validWord);
+    // console.log(validWord);
 
     isLoading=false;
     setLoading(false);
@@ -76,11 +76,11 @@ async function commit(){
         else if(wordParts.includes(currentGuessCorrect[index]) && map[currentGuessCorrect[index]]>0){
             letters[ANSWER_LENGTH*currentRow+index].classList.add('close');
             map[currentGuessCorrect[index]]--;
-            console.log(map);
+            // console.log(map);
         }
         else{
             letters[ANSWER_LENGTH*currentRow+index].classList.add('wrong');
-            console.log(map);
+            // console.log(map);
         }
     
       }
@@ -122,7 +122,7 @@ function isLetters(letter) {
     return /^[a-zA-Z]$/.test(letter);
 }
 function addLetter(letter){
-    console.log(letter)
+    // console.log(letter)
     if(currentGuess.length<ANSWER_LENGTH){
         currentGuess+=letter;
     }
