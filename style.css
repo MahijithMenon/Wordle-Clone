@@ -1,0 +1,58 @@
+.middle{
+    text-align: center;
+}
+.scoreboard{
+    /* border: 2px solid black; */
+    /* height: 50vh;
+    weight:30vw; */
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    align-items: center;
+}
+.scoreboardletter{
+  border: 2px solid black; 
+  width: 10vh; 
+  height: 10vh; 
+  margin: 3px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.hidden{
+    visibility: hidden;
+}
+.correct{
+    background-color: greenyellow;
+}
+.close{
+    background-color: grey;
+}
+.wrong{
+    background-color: red;
+}
+.invalid{
+    animation: flash 1s;
+}
+.output {
+    position: relative;
+    color: black;
+    height: 10vh;
+    width: 70vh;
+    margin: auto;
+    font-size: 34px;
+    font-weight: bold;
+    left: 16vh;
+    top: -6vh;
+}
+@keyframes flash {
+    5%{
+        border-color: crimson;
+    }
+
+    100%{
+        border-color: black;
+    }
+}
